@@ -148,10 +148,11 @@ WHERE c.Location = 'Pune' AND a.Experience >= 3;
 SELECT DISTINCT JobTitle, Salary FROM JOBS WHERE SALARY >=60000 AND SALARY<=80000;
 
 -- 12.  Find the jobs that have not received any applications.
-SELECT j.*
-FROM Jobs j
-LEFT JOIN Applications a ON j.JobID = a.JobID
-WHERE a.ApplicationID IS NULL;
+SELECT j. JobTitle, c. CompanyName
+FROM Jobs J
+JOIN Companies c ON j. CompanyID = c. CompanyID
+LEFT JOIN Applications a ON j.JobID = a. JobID
+WHERE a ApplicationID IS NULL;
 
 -- 13. Retrieve a list of job applicants along with the companies they have applied to and the positions they have applied for.
 SELECT a.FirstName, a.LastName, c.CompanyName, j.JobTitle
