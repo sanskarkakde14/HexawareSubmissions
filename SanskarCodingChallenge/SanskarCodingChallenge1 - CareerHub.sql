@@ -189,10 +189,10 @@ FROM Jobs
 WHERE JobTitle LIKE '%Developer%' OR JobTitle LIKE '%Engineer%';
 
 -- 19. Retrieve a list of applicants and the jobs they have applied for, including those who have not applied and jobs without applicants.
-SELECT a.FirstName, a.LastName, j.JobTitle
-FROM Applicants a
-LEFT JOIN Applications ap ON a.ApplicantID = ap.ApplicantID
-LEFT JOIN Jobs j ON ap.JobID = j.JobID;
+SELECT a.ApplicantID, a.FirstName, a.LastName, j.JobID, j.JobTitle
+FROM Applicants AS a
+FULL OUTER JOIN Applications AS a1 ON a.ApplicantID= a1.ApplicantID
+FULL OUTER JOIN Jobs AS j ON a1.JobID = j.JobID
 
 -- 20. List all combinations of applicants and companies where the company is in a specific city and the applicant has more than 2 years of experience. For example: city=Chennai
 SELECT a.FirstName, a.LastName, c.CompanyName
