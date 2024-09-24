@@ -1,18 +1,26 @@
---Creating And Initializing The DB
+-- Creating and Initializing the DB only if it does not already exist
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'CareerHub')
+BEGIN
+    CREATE DATABASE CareerHub;
+END;
 
-CREATE DATABASE CareerHub;
 USE CareerHub;
 
---Laying Down The Schema
+-- Laying Down the Schema
 
 -- Table: Companies
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Companies' AND xtype='U')
+BEGIN
 CREATE TABLE Companies (
     CompanyID INT PRIMARY KEY IDENTITY(1,1),
     CompanyName VARCHAR(255) NOT NULL,
     Location VARCHAR(255) NOT NULL
 );
+END;
 
 -- Table: Jobs
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Jobs' AND xtype='U')
+BEGIN
 CREATE TABLE Jobs (
     JobID INT PRIMARY KEY IDENTITY(1,1),
     CompanyID INT NOT NULL,
@@ -27,8 +35,11 @@ CREATE TABLE Jobs (
         ON UPDATE CASCADE 
         ON DELETE CASCADE
 );
+END;
 
 -- Table: Applicants
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Applicants' AND xtype='U')
+BEGIN
 CREATE TABLE Applicants (
     ApplicantID INT PRIMARY KEY IDENTITY(1,1),
     FirstName VARCHAR(50) NOT NULL,
@@ -40,8 +51,11 @@ CREATE TABLE Applicants (
     City VARCHAR(100),
     State VARCHAR(100)
 );
+END;
 
 -- Table: Applications
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Applications' AND xtype='U')
+BEGIN
 CREATE TABLE Applications (
     ApplicationID INT PRIMARY KEY IDENTITY(1,1),
     JobID INT NOT NULL,
@@ -57,6 +71,7 @@ CREATE TABLE Applications (
         ON UPDATE CASCADE 
         ON DELETE CASCADE
 );
+END;
 
 --Populating The Schema With Values
 
