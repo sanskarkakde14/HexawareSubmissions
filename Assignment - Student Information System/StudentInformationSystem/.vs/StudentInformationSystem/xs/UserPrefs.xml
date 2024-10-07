@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{A205EA70-6326-4599-A76C-995906ECB6A8}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.StudentInformationSystem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StudentInformationSystem/Repository/EnrollmentRespository.cs">
+    <Files>
+      <File FileName="StudentInformationSystem/Repository/Interfaces/ICourseRepository.cs" />
+      <File FileName="StudentInformationSystem/Program.cs" />
+      <File FileName="StudentInformationSystem/Repository/Interfaces/IStudentRepository.cs" />
+      <File FileName="StudentInformationSystem/Repository/PaymentRepository.cs" />
+      <File FileName="StudentInformationSystem/Repository/TeacherRepository.cs" />
+      <File FileName="StudentInformationSystem/Model/Payment.cs" />
+      <File FileName="StudentInformationSystem/Repository/StudentRepository.cs" />
+      <File FileName="StudentInformationSystem/Repository/CourseRepository.cs" />
+      <File FileName="StudentInformationSystem/Repository/Interfaces/IEnrollmentRepository.cs" />
+      <File FileName="StudentInformationSystem/Repository/EnrollmentRespository.cs" Line="138" Column="168" />
+      <File FileName="StudentInformationSystem/Model/Enrollment.cs" />
+      <File FileName="StudentInformationSystem/Model/Course.cs" />
+      <File FileName="StudentInformationSystem/Service/ISISservice.cs" />
+      <File FileName="StudentInformationSystem/MainModule.cs" />
+      <File FileName="StudentInformationSystem/Model/Teacher.cs" />
+      <File FileName="StudentInformationSystem/Repository/Interfaces/ITeacherRepository.cs" />
+      <File FileName="StudentInformationSystem/Repository/Interfaces/IPaymentRepository.cs" />
+      <File FileName="StudentInformationSystem/Service/ServiceImplementation.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StudentInformationSystem" expanded="True">
+            <Node name="StudentInformationSystem" expanded="True">
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+                <Node name="EnrollmentRespository.cs" selected="True" />
+              </Node>
+              <Node name="Service" expanded="True" />
+              <Node name="Utils" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
